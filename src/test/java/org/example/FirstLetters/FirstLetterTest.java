@@ -1,4 +1,4 @@
-package org.example.FirstLetters.__tests__;
+package org.example.FirstLetters;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,10 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.example.FirstLetters.FirstLetter.changeFirstLetter;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class FirstLetterTests {
+class FirstLetterTest {
 
     @Test
     @DisplayName("Test changeFirstLetter")
@@ -46,9 +45,7 @@ public class FirstLetterTests {
         String expectedMsg = "List is empty";
 
         //then
-        Exception exception = assertThrows(RuntimeException.class, () -> changeFirstLetter(words));
-        String actualMsg = exception.getMessage();
-        assertTrue(actualMsg.contains(expectedMsg));
+        assertThrowsExactly(NullPointerException .class, () -> changeFirstLetter(words), expectedMsg);
     }
 
     @Test
@@ -60,9 +57,7 @@ public class FirstLetterTests {
         String expectedMsg = "List is empty";
 
         //then
-        Exception exception = assertThrows(RuntimeException.class, () -> changeFirstLetter(words));
-        String actualMsg = exception.getMessage();
-        assertTrue(actualMsg.contains(expectedMsg));
+        assertThrowsExactly(NullPointerException.class, () -> changeFirstLetter(words), expectedMsg);
     }
 
     @Test
@@ -75,8 +70,7 @@ public class FirstLetterTests {
         String expectedMsg = "First character is not a letter";
 
         //then
-        Exception exception = assertThrows(RuntimeException.class, () -> changeFirstLetter(words));
-        String actualMsg = exception.getMessage();
-        assertTrue(actualMsg.contains(expectedMsg));
+        assertThrowsExactly(RuntimeException.class, () -> changeFirstLetter(words), expectedMsg);
     }
+
 }

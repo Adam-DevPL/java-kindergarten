@@ -23,39 +23,48 @@ public class SalaryCalculator {
     }
 
     public static BigDecimal calcSalary(BigDecimal salary, Map<String, BigDecimal> taxes) {
-        BigDecimal socialInsurance = salary.multiply(
+
+        BigDecimal socialInsurance = getSocialInsuranceValue(salary, taxes);
+
+        BigDecimal healthInsurance = getHealthInsuranceValue(salary, taxes);
+
+        BigDecimal advancePaymentOfIncomeTax = getAdvancePaymentOfIncomeTaxValue(salary, taxes);
+
+        BigDecimal incomeTax = getIncomeTaxValue(advancePaymentOfIncomeTax, taxes);
+
+        return salary.subtract(socialInsurance).subtract(healthInsurance).subtract(incomeTax);
+    }
+
+    private static BigDecimal getSocialInsuranceValue(BigDecimal salary, Map<String, BigDecimal> taxes) {
+        return salary.multiply(
                 taxes.get("DISABILITY_PENSION_CONTRIBUTION")
                         .add(taxes.get("SICKNESS_INSURANCE_CONTRIBUTION"))
                         .add(taxes.get("RETIREMENT_PENSION_CONTRIBUTION"))
         ).setScale(2, RoundingMode.HALF_UP);
+    }
 
-        System.out.println(socialInsurance);
-
-        BigDecimal healthInsurance = salary
-                .subtract(socialInsurance)
+    private static BigDecimal getHealthInsuranceValue(BigDecimal salary, Map<String, BigDecimal> taxes) {
+        return salary
+                .subtract(getSocialInsuranceValue(salary, taxes))
                 .multiply(taxes.get("HEALTH_INSURANCE_CONTRIBUTION"))
                 .setScale(2, RoundingMode.HALF_UP);
+    }
 
-        System.out.println(healthInsurance);
-
-        BigDecimal advancePaymentOfIncomeTax = salary
-                .subtract(socialInsurance)
+    private static BigDecimal getAdvancePaymentOfIncomeTaxValue(BigDecimal salary, Map<String, BigDecimal> taxes) {
+        return salary
+                .subtract(getSocialInsuranceValue(salary, taxes))
                 .subtract(taxes.get("TAX_FREE_ALLOWANCE"))
                 .setScale(0, RoundingMode.HALF_UP);
+    }
 
-        System.out.println(advancePaymentOfIncomeTax);
-
-        BigDecimal incomeTax = advancePaymentOfIncomeTax
+    private static BigDecimal getIncomeTaxValue(BigDecimal salary, Map<String, BigDecimal> taxes) {
+        return getAdvancePaymentOfIncomeTaxValue(salary, taxes)
                 .multiply(taxes.get("TAX_THRESHOLD"))
                 .subtract(taxes.get("COST_OF_EARNING_INCOME"))
                 .subtract(
-                        salary.subtract(socialInsurance)
+                        salary.subtract(getSocialInsuranceValue(salary, taxes))
                                 .multiply(taxes.get("HEALTH_INSURANCE_DEDUCTION"))
                 )
                 .setScale(0, RoundingMode.HALF_UP);
-
-        System.out.println(incomeTax);
-
-        return salary.subtract(socialInsurance).subtract(healthInsurance).subtract(incomeTax);
     }
 }

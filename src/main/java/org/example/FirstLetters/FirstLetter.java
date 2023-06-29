@@ -19,7 +19,7 @@ public class FirstLetter {
     public static List<String> changeFirstLetter(List<String> words) {
 
         if (words == null || words.isEmpty()) {
-            throw new RuntimeException("List is empty");
+            throw new NullPointerException ("List is empty");
         }
 
         List<String> result = new ArrayList<>(words);
@@ -28,7 +28,7 @@ public class FirstLetter {
             String word = result.get(i);
 
             if (!Character.isLetter(word.charAt(0))) {
-                throw new RuntimeException("First character is not a letter");
+                continue;
             }
 
             word = Character.toUpperCase(word.charAt(0)) + word.substring(1);

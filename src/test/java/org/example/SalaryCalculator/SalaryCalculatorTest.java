@@ -1,6 +1,5 @@
-package org.example.SalaryCalculator.__tests__;
+package org.example.SalaryCalculator;
 
-import org.example.SalaryCalculator.SalaryCalculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +7,9 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SalaryCalculatorTests {
+import static org.junit.jupiter.api.Assertions.*;
+
+class SalaryCalculatorTest {
 
     @Test
     public void testCalcSalary() {
@@ -32,4 +33,5 @@ public class SalaryCalculatorTests {
         //then
         Assertions.assertEquals(expectedNetSalary, netSalary);
     }
+
 }

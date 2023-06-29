@@ -1,6 +1,5 @@
-package org.example.FibbonaciSequence.__tests__;
+package org.example.FibbonaciSequence;
 
-import org.example.FibbonaciSequence.FibbonaciSequence;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FibbonnaciSequenceTests {
+class FibbonaciSequenceTest {
 
     @Test
     @DisplayName("generate Fibonacci sequence")
@@ -34,10 +33,7 @@ public class FibbonnaciSequenceTests {
         String expectedMsg = "[3, 3, 5] is NOT in Fibonacci sequence";
 
         //then
-        Exception exception = assertThrows(RuntimeException.class, () -> FibbonaciSequence.sequence(firstNumbers, size));
-        String actualMsg = exception.getMessage();
-
-        assertTrue(actualMsg.contains(expectedMsg));
+        assertThrowsExactly(RuntimeException.class, () -> FibbonaciSequence.sequence(firstNumbers, size), expectedMsg);
     }
 
     @Test
@@ -49,10 +45,7 @@ public class FibbonnaciSequenceTests {
         String expectedMsg = "[1, 2, 8] is NOT in Fibonacci sequence";
 
         //then
-        Exception exception = assertThrows(RuntimeException.class, () -> FibbonaciSequence.sequence(firstNumbers, size));
-        String actualMsg = exception.getMessage();
-
-        assertTrue(actualMsg.contains(expectedMsg));
+        assertThrowsExactly(RuntimeException.class, () -> FibbonaciSequence.sequence(firstNumbers, size), expectedMsg);
     }
 
     @Test
@@ -64,9 +57,6 @@ public class FibbonnaciSequenceTests {
         String expectedMsg = "Size must be at least 3";
 
         //then
-        Exception exception = assertThrows(RuntimeException.class, () -> FibbonaciSequence.sequence(firstNumbers, size));
-        String actualMsg = exception.getMessage();
-
-        assertTrue(actualMsg.contains(expectedMsg));
+        Exception exception = assertThrowsExactly(RuntimeException.class, () -> FibbonaciSequence.sequence(firstNumbers, size), expectedMsg);
     }
 }

@@ -1,15 +1,13 @@
-package org.example.NumberFinder.__tests__;
+package org.example.NumberFinder;
 
-import org.example.NumberFinder.NumberFinder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class NumberFinderTests {
+class NumberFinderTest {
 
     @Test
     public void testLowestNumberFinder() {
@@ -31,9 +29,7 @@ public class NumberFinderTests {
         String expectedMsg = "Array is empty";
 
         //then
-        Exception exception = assertThrows(RuntimeException.class, () -> NumberFinder.lowestNumberFinder(numbers));
-        String actualMsg = exception.getMessage();
-        assertTrue(actualMsg.contains(expectedMsg));
+        assertThrowsExactly(ArrayIndexOutOfBoundsException .class, () -> NumberFinder.lowestNumberFinder(numbers), expectedMsg);
     }
 
     @Test
@@ -61,4 +57,5 @@ public class NumberFinderTests {
         Assertions.assertEquals(-10, result.getLowestNumber());
         Assertions.assertEquals(Arrays.asList(-10, -5, -3), result.getSortedNumbers());
     }
+
 }

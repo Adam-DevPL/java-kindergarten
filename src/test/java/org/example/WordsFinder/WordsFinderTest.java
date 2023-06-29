@@ -1,12 +1,13 @@
-package org.example.WordsFinder.__tests__;
+package org.example.WordsFinder;
 
-import org.example.WordsFinder.WordsFinder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-public class WordsFinderTests {
+import static org.junit.jupiter.api.Assertions.*;
+
+class WordsFinderTest {
 
     @Test
     public void testWordsFinder() {
@@ -86,4 +87,5 @@ public class WordsFinderTests {
         Assertions.assertEquals(1, result.get("multiple"));
         Assertions.assertEquals(1, result.get("spaces"));
     }
+
 }

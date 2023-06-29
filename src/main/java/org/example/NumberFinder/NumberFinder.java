@@ -13,7 +13,7 @@ public class NumberFinder {
     public static <T extends Comparable<T>> SortedNumbers<T> lowestNumberFinder(T[][] numbers) {
 
         if (numbers == null || numbers.length == 0 || numbers[0].length == 0) {
-            throw new RuntimeException("Array is empty");
+            throw new ArrayIndexOutOfBoundsException ("Array is empty");
         }
 
         List<SortedNumbers<T>> result = new ArrayList<>();

@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78fb8d4b-ae3a-496f-bb54-b1f8bd40bbcb" name="Changes" comment="all exercises and tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FibbonaciSequence/FibbonaciSequenceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FirstLetters/FirstLetterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/NumberFinder/NumberFinderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SalaryCalculator/SalaryCalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/WordsFinder/WordsFinderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FibbonaciSequence/FibbonaciSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FibbonaciSequence/FibbonaciSequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FibbonaciSequence/__tests__/FibbonnaciSequenceTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FirstLetters/FirstLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FirstLetters/FirstLetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FirstLetters/__tests__/FirstLetterTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NumberFinder/NumberFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NumberFinder/NumberFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NumberFinder/__tests__/NumberFinderTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SalaryCalculator/SalaryCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SalaryCalculator/SalaryCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SalaryCalculator/__tests__/SalaryCalculatorTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WordsFinder/WordsFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WordsFinder/WordsFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WordsFinder/__tests__/WordsFinderTests.java" beforeDir="false" />
+    </list>
+    <list id="c32bfe9c-e01e-4850-9262-283404382a4a" name="Changes by sebastian" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NumberFinder/NumberFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NumberFinder/NumberFinder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +34,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -44,6 +64,14 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/example/NumberFinder/NumberFinder.java">
+      <ranges>
+        <range start1="2" end1="5" start2="2" end2="3" changelist="c32bfe9c-e01e-4850-9262-283404382a4a" />
+        <range start1="15" end1="16" start2="13" end2="14" changelist="78fb8d4b-ae3a-496f-bb54-b1f8bd40bbcb" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -64,82 +92,91 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.NumberFinderTests">
-    <configuration name="WordsFinder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.WordsFinder.WordsFinder" />
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.WordsFinder" />
+      <recent name="org.example.SalaryCalculator" />
+      <recent name="org.example.NumberFinder" />
+      <recent name="org.example.FirstLetters" />
+      <recent name="org.example.FibbonaciSequence" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.NumberFinderTest.testLowestNumberFinder_EmptyArray">
+    <configuration name="All in kindergarten" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kindergarten" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.WordsFinder.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberFinderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstLetterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kindergarten" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.NumberFinder.__tests__.*" />
+          <option name="PATTERN" value="org.example.FirstLetters.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.NumberFinder.__tests__" />
-      <option name="MAIN_CLASS_NAME" value="org.example.NumberFinder.__tests__.NumberFinderTests" />
+      <option name="PACKAGE_NAME" value="org.example.FirstLetters" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FirstLetters.FirstLetterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordsFinderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstLetterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kindergarten" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.WordsFinder.__tests__.*" />
+          <option name="PATTERN" value="org.example.FirstLetters.__tests__.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.WordsFinder.__tests__" />
-      <option name="MAIN_CLASS_NAME" value="org.example.WordsFinder.__tests__.WordsFinderTests" />
+      <option name="PACKAGE_NAME" value="org.example.FirstLetters.__tests__" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FirstLetters.__tests__.FirstLetterTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordsFinderTests.testWordsFinder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstLetterTests.testChangeFirstLetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kindergarten" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.WordsFinder.__tests__.*" />
+          <option name="PATTERN" value="org.example.FirstLetters.__tests__.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.WordsFinder.__tests__" />
-      <option name="MAIN_CLASS_NAME" value="org.example.WordsFinder.__tests__.WordsFinderTests" />
-      <option name="METHOD_NAME" value="testWordsFinder" />
+      <option name="PACKAGE_NAME" value="org.example.FirstLetters.__tests__" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FirstLetters.__tests__.FirstLetterTests" />
+      <option name="METHOD_NAME" value="testChangeFirstLetter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordsFinderTests.testWordsFinderWithSpecialCharacters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NumberFinderTest.testLowestNumberFinder_EmptyArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kindergarten" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.WordsFinder.__tests__.*" />
+          <option name="PATTERN" value="org.example.NumberFinder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.WordsFinder.__tests__" />
-      <option name="MAIN_CLASS_NAME" value="org.example.WordsFinder.__tests__.WordsFinderTests" />
-      <option name="METHOD_NAME" value="testWordsFinderWithSpecialCharacters" />
+      <option name="PACKAGE_NAME" value="org.example.NumberFinder" />
+      <option name="MAIN_CLASS_NAME" value="org.example.NumberFinder.NumberFinderTest" />
+      <option name="METHOD_NAME" value="testLowestNumberFinder_EmptyArray" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NumberFinderTests" />
-        <item itemvalue="JUnit.WordsFinderTests" />
-        <item itemvalue="JUnit.WordsFinderTests.testWordsFinder" />
-        <item itemvalue="JUnit.WordsFinderTests.testWordsFinderWithSpecialCharacters" />
-        <item itemvalue="Application.WordsFinder" />
+        <item itemvalue="JUnit.NumberFinderTest.testLowestNumberFinder_EmptyArray" />
+        <item itemvalue="JUnit.All in kindergarten" />
+        <item itemvalue="JUnit.FirstLetterTest" />
+        <item itemvalue="JUnit.FirstLetterTests" />
+        <item itemvalue="JUnit.FirstLetterTests.testChangeFirstLetter" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686990897893</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="all exercises and tests">
+      <created>1686991374148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686991374148</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

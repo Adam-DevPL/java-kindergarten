@@ -10,6 +10,8 @@ public class WordsFinder {
 
     public static Map<String, Integer> wordsFinder(String text) {
 
+        final String regex = "[^a-zA-Z]";
+
         if (text == null || text.isEmpty()) {
             throw new IllegalArgumentException("Text cannot be null or empty");
         }
@@ -23,7 +25,7 @@ public class WordsFinder {
                 continue;
             }
 
-            word = word.replaceAll("[^a-zA-Z]", "").toLowerCase();
+            word = word.replaceAll(regex, "").toLowerCase();
 
             if (result.containsKey(word)) {
                 result.put(word, result.get(word) + 1);
